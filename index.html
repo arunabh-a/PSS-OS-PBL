@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Scheduling Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Process Scheduling Simulator</h1>
+        <div class="scheduler">
+            <div class="processes">
+                <label for="process-input">Enter Processes:</label>
+                <input type="text" id="process-input" placeholder="e.g., P1 0 5, P2 2 3">
+                <button onclick="addProcesses()">Add Processes</button>
+            </div>
+            <div class="controls">
+                <label for="algorithm-select">Select Algorithm:</label>
+                <select id="algorithm-select">
+                    <option value="fcfs">FCFS (First-Come, First-Served)</option>
+                    <option value="round-robin">Round Robin</option>
+                    <option value="sjf">SJF (Shortest Job First)</option>
+                    <option value="priority">Priority Scheduling</option>
+                </select>
+                <button onclick="startSimulation()">Start Simulation</button>
+                <button onclick="resetSimulation()">Reset</button>
+            </div>
+            
+            <div class="visualization">
+                <div class="queue" id="ready-queue">
+                    <!-- Ready queue for processes -->
+                </div>
+                <div id="gantt-chart">
+                    <!-- Gantt chart for visualizing process scheduling -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
